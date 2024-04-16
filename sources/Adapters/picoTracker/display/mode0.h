@@ -7,7 +7,6 @@ extern "C" {
 #endif
 
 #include "ili9341.h"
-#include "st7789.h"
 
 // ARNE-16 palette converted to RGB565 --
 // https://lospec.com/palette-list/arne-16

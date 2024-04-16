@@ -47,7 +47,7 @@
 #define ILI9341_FRMCTR3                                                        \
   0xB3 ///< Frame Rate control (In Partial Mode/Full Colors)
 #define ILI9341_INVCTR 0xB4  ///< Display Inversion Control
-  0xB4 ///< Display Inversion Control
+  
 #define ILI9341_DFUNCTR 0xB6 ///< Display Function Control
  
 #define ILI9341_PWCTR1 0xC0 ///< Power Control 1

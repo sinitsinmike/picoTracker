@@ -1,7 +1,8 @@
 add_library(platform_display
   font.h
-  ili9341.h ili9341.c
-  mode0.h mode0.c
+st7789.h st7789.c
+#  ili9341.h ili9341.c
+#  mode0.h mode0.c
 #  mode1.h mode1.c
 #  mode2.h mode1.c
 )

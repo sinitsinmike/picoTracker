@@ -1,9 +1,6 @@
-add_library(platform_display
-  font.h
-  ili9341.h ili9341.c
-  mode0.h mode0.c
-#  mode1.h mode1.c
-#  mode2.h mode1.c
+add_library(
+  st7789.h st7789.c
+  mpfile.h mpfile.c
 )
 
 target_link_libraries(platform_display PUBLIC pico_stdlib
@@ -13,3 +10,13 @@ target_link_libraries(platform_display PUBLIC pico_stdlib
 target_include_directories(platform_display PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 include_directories(${PROJECT_SOURCE_DIR})
+mpfile.c
+Add files via upload
+9 minutes ago
+mpfile.h
+Add files via upload
+9 minutes ago
+st7789.c
+Add files via upload
+9 minutes ago
+st7789.h

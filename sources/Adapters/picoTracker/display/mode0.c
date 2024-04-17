@@ -109,18 +109,18 @@ inline void mode0_draw_sub_region(uint8_t x, uint8_t y, uint8_t width,
 
   // column address set
   st7789_set_command(st7789_CASET);
-  ili9341_command_param16(screen_y);
-  ili9341_command_param16(screen_y + screen_height - 1);
+  st7789_command_param16(screen_y);
+  st7789_command_param16(screen_y + screen_height - 1);
 
   // page address set
-  ili9341_set_command(ILI9341_PASET);
-  ili9341_command_param16(screen_x);
-  ili9341_command_param16(screen_x + screen_width - 1);
+  st7789_set_command(st7789_PASET);
+  st7789_command_param16(screen_x);
+  st7789_command_param16(screen_x + screen_width - 1);
 
   // start writing
-  ili9341_set_command(ILI9341_RAMWR);
+  st7789_set_command(st7789_RAMWR);
 
-  ili9341_start_writing();
+  st7789_start_writing();
 
   for (int page = x; page < x + width; page++) {
     // create one column of screen information
@@ -142,10 +142,10 @@ inline void mode0_draw_sub_region(uint8_t x, uint8_t y, uint8_t width,
         }
       }
     }
-    ili9341_write_data_continuous(buffer,
+    st7789_write_data_continuous(buffer,
                                   CHAR_WIDTH * screen_height * sizeof(int16_t));
   }
-  ili9341_stop_writing();
+  st7789_stop_writing();
 }
 
 void mode0_draw_changed() {

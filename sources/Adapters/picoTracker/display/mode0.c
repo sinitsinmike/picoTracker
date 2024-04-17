@@ -1,7 +1,7 @@
 #include "mode0.h"
 #include "font.h"
 #include "hardware/spi.h"
-#include "ili9341.h"
+#include "st7789.h"
 #include "pico/stdlib.h"
 #include <stdio.h>
 #include <string.h>

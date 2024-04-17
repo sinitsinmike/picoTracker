@@ -108,7 +108,7 @@ inline void mode0_draw_sub_region(uint8_t x, uint8_t y, uint8_t width,
   uint16_t screen_height = height * CHAR_HEIGHT;
 
   // column address set
-  ili9341_set_command(ILI9341_CASET);
+  st7789_set_command(st7789_CASET);
   ili9341_command_param16(screen_y);
   ili9341_command_param16(screen_y + screen_height - 1);
 
